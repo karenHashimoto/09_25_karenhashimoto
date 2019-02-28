@@ -37,15 +37,17 @@ function chk_ssid()
     session_regenerate_id(true);
     $_SESSION['chk_ssid']=session_id();
 }
+
+
 }
 
-if($_SESSION['name'] == $name) {
-    header('Location: select.php');
-    exit();
-} else {
-    $_SESSION['name'] = '';
-    echo '認証エラー: ユーザ名とパスワードを確認してください。';
-}
+// if($_SESSION['name'] == $name) {
+//     header('Location: select.php');
+//     exit();
+// } else {
+//     $_SESSION['name'] = '';
+//     echo '認証エラー: ユーザ名とパスワードを確認してください。';
+// }
 
 function menuusr()  //ログイン中の会員に表示されるメニュー
 {

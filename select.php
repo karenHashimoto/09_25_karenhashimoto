@@ -14,7 +14,6 @@ if($_SESSION["kanri_flg"]==0){
     $menu=$menuusr;
 }elseif($_SESSION["kanri_flg"]==1){
     $menu=$menukanri;
-
 }else{
     echo'error';
 }
@@ -46,6 +45,8 @@ if ($status==false) {
         $view .= '</li>';
     }
 }
+
+
 ?>
 
 
@@ -57,6 +58,7 @@ if ($status==false) {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <title>読んだ本一覧</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <style>
@@ -64,6 +66,9 @@ if ($status==false) {
             padding: 10px;
             font-size: 16px;
         }
+        span {
+    color: #006eff;
+}
     </style>
 </head>
 
@@ -77,25 +82,18 @@ if ($status==false) {
             <div class="collapse navbar-collapse" id="navbarNav">
            
                 <ul class="navbar-nav">
-                <?=$menu?>
-               
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="index.php">読んだ本登録</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="select.php">読んだ本一覧</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="user_index.php">user登録</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="user_select.php">user管理</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="user_logout.php">ログアウト</a>
-                    </li> -->
+                <?=$menu?> 
+                <!-- <li>ようこそ!<?php echo $_SESSION['name'] ?>さん</li> -->
                 </ul>
             </div>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+           
+           <ul class="navbar-nav">
+           ようこそ!<span><?php echo $_SESSION['name'] ?></span>さん
+           </ul>
+       </div>
+
         </nav>
     </header>
 

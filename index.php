@@ -29,13 +29,16 @@ if($_SESSION["kanri_flg"]==0){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>第八回課題</title>
+    <title>第９回課題</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <style>
-        div{
+        div {
             padding: 10px;
-            font-size:16px;
-            }
+            font-size: 16px;
+        }
+        span {
+    color: #006eff;
+}
     </style>
 </head>
 
@@ -50,23 +53,17 @@ if($_SESSION["kanri_flg"]==0){
             <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
             <?=$menu?>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="index.php">読んだ本登録</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="select.php">読んだ本一覧</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="user_index.php">user登録</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="user_select.php">user管理</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="user_logout.php">ログアウト</a>
-                    </li> -->
+            
+                    
                 </ul>
             </div>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+           
+           <ul class="navbar-nav">
+           ようこそ!<span><?php echo $_SESSION['name'] ?></span>さん
+           </ul>
+       </div>
         </nav>
     </header>
 
